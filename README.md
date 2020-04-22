@@ -14,6 +14,7 @@ docker run \
   --detach \
   --publish 8080:8080 \
   --volume jenkins_home:/var/jenkins_home \
+  --volume /var/run/docker.sock:/var/run/docker.sock \
   adamkdean/jenkins
 ```
 
@@ -28,6 +29,7 @@ docker run \
   --name jenkins \
   --network your-network-here \
   --volume jenkins_home:/var/jenkins_home \
+  --volume /var/run/docker.sock:/var/run/docker.sock \
   --env VIRTUAL_HOST=jenkins.example.com \
   --env VIRTUAL_PORT=8080 \
   --env LETSENCRYPT_HOST=jenkins.example.com \
