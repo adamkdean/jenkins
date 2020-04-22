@@ -22,7 +22,7 @@ docker run \
 
 It works better if it's used with [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy).
 
-````
+```
 docker run \
   --detach \
   --restart always \
